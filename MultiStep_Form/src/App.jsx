@@ -40,6 +40,8 @@ function pre(){
         {pg+1}/{show.length}
       </div>
   {show[pg]}
+
+  <div className="next" onClick={()=>{next()}}>next</div>
     
     </div>
     </>
