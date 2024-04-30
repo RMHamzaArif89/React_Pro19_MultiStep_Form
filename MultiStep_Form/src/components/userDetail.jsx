@@ -1,17 +1,13 @@
 import React from 'react'
 import './form.css'
 
-function UserDetail({next}) {
+function UserDetail() {
   return (
  <form action="/" className="form">
       <h1>Enter User Details</h1>
     <input type="text" placeholder='Name' />
     <input type="text" placeholder='Age' />
     <input type="text" placeholder='Height' />
-   <div className="btns">
-   
-    <div className="btn" onClick={next}>Next</div>
-   </div>
  </form>
   )
 }

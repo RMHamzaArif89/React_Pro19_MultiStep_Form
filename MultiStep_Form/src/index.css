@@ -3,3 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+.page{
+  font-size: 1.3rem;
+  color: red;
+  font-family: sans-serif;
+}

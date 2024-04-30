@@ -38,7 +38,7 @@ input{
 
 }
 .btns{
-    width: 90%;
+    width: 200px;
     height: 40px;
     display: flex;
     justify-content: space-around;

@@ -1,7 +1,7 @@
 import React from 'react'
 import './form.css'
 
-function Address({pre,next}) {
+function Address() {
   return (
     <form action="/" className="form">
     <h1>Address</h1>
@@ -9,8 +9,8 @@ function Address({pre,next}) {
   <input type="text" placeholder='Current Address' />
   
  <div className="btns">
- <div className="btn" onClick={pre}>Pre</div>
-  <div className="btn" onClick={next}>Next</div>
+ <div className="btn">Pre</div>
+  <div className="btn">Next</div>
  </div>
 </form>
   )

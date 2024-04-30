@@ -8,6 +8,10 @@ import Account from './components/Account'
 
 function App() {
   let[pg,setPg]=useState(0)
+  let[state,setState]=useState(false)
+    if(state){
+        alert('login the form')
+    }
 
 function next(){
   
@@ -29,9 +33,9 @@ function pre(){
  
   
 }
-  let[show,setShow]=useState([<UserDetail next={()=>{next()}}/>
-  ,<Address  next={()=>{next()}} pre={()=>{pre()}}/>
-  ,<Account pre={()=>{pre()}}/>])
+  let[show,setShow]=useState([<UserDetail/>
+  ,<Address/>
+  ,<Account/>])
 
   return (
     <>
@@ -41,7 +45,11 @@ function pre(){
       </div>
   {show[pg]}
 
-  <div className="next" onClick={()=>{next()}}>next</div>
+<div className="btns">
+{pg<show.length-1 && <div className="btn" onClick={()=>{next()}}>next</div>}
+{pg!=0 && <div className="btn" onClick={()=>{pre()}}>pre</div>}
+{pg==show.length-1 && <div className='btn' onClick={setState(!state)}>Submit</div>}
+</div>
     
     </div>
     </>
