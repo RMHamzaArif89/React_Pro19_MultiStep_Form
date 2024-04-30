@@ -1,7 +1,7 @@
 import React from 'react'
 import './form.css'
 
-function Address({next,pre}) {
+function Address({pre,next}) {
   return (
     <form action="/" className="form">
     <h1>Address</h1>

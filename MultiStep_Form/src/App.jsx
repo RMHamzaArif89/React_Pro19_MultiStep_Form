@@ -10,20 +10,35 @@ function App() {
   let[pg,setPg]=useState(0)
 
 function next(){
-  setPg(pg+1)
+  
+  
+setPg(
+  (i)=>{
+ if(i>=show.length-1) return i
+ return i+1
+  }
+)
   
 }
 function pre(){
-  setPg(pg-1)
+  setPg(
+    (i)=>{
+   if(i==0) return show.length-1
+   return i-1
+    })
+ 
   
 }
-  let[show,setShow]=useState([<UserDetail next={()=>{next()}} pre={pre}/>
-  ,<Address  next={()=>{next()}} pre={pre}/>
-  ,<Account/>])
+  let[show,setShow]=useState([<UserDetail next={()=>{next()}}/>
+  ,<Address  next={()=>{next()}} pre={()=>{pre()}}/>
+  ,<Account pre={()=>{pre()}}/>])
 
   return (
     <>
     <div className="container">
+      <div className="page">
+        {pg+1}/{show.length}
+      </div>
   {show[pg]}
     
     </div>
