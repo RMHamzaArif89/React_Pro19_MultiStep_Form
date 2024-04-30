@@ -46,9 +46,9 @@ function pre(){
   {show[pg]}
 
 <div className="btns">
-{pg<show.length-1 && <div className="btn" onClick={()=>{next()}}>next</div>}
 {pg!=0 && <div className="btn" onClick={()=>{pre()}}>pre</div>}
-{pg==show.length-1 && <div className='btn' onClick={setState(!state)}>Submit</div>}
+{pg<show.length-1 && <div className="btn" onClick={()=>{next()}}>next</div>}
+{pg==show.length-1 && <div className='btn' onClick={()=>{setState((pre)=>{return !pre})}}>Submit</div>}
 </div>
     
     </div>
